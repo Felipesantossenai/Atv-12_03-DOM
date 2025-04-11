@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Manipulando Classe</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- LINK JAVASCRIPT -->
+    <!-- <script src="./scripts.js" defer></script> -->
+  </head>
+  <body>
+    <section id="container" class="visible"></section>
+
+    <script>
+      const container = document.getElementById("container");
+      container.classList.add("qualquer_coisa");
+      container.classList.add("ativo");
+      container.classList.remove("qualquer_coisa");
+      container.classList.toggle("invisivel");
+      console.log(container.classList.contains("ativo"));
+      console.log(container.classList.contains("card"));
+
+      if (container.classList.contains("ativo")) {
+        console.log("A caixa esta ativa");
+      }
+    </script>
+  </body>
+</html>

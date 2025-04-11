@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  /* background: url("../image/Wallpaper\ 1.jpg") center / cover no-repeat; */ /* Removido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+}
+
+#search input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+}
+
+#search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#search i {
+  color: #fff;
+}
+
+.weather {
+  width: 100%;
+}
+
+.weather .title {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.weather .infos .temp {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 20px;
+
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px #fff;
+}
+
+.weather img {
+  width: 50px;
+  height: 60px;
+}
+
+.weather .temp {
+  color: #fff;
+}
+
+.temp_value {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.temp_description {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #bebebe;
+}
+
+.other_infos {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  color: #fff;
+}
+
+.other_infos .info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  gap: 10px;
+}
+
+.other_infos .info h2 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.other_infos .info i {
+  text-align: center;
+  font-size: 20px;
+  width: 20%;
+}
+
+.temp_max_icon {
+  color: #ff0000;
+}
+.temp_min_icon {
+  color: #0ea5e9;
+}
+
+.humidity_icon {
+  color: #0284c7;
+}
+.wind_icon {
+  color: purple;
+}
+
+/* Estilo do vídeo de fundo */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}

@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    #0c0f1a,
+    #1a2233,
+    #223344,
+    #2e4155,
+    #1d3a4f,
+    #16212f,
+    #0e1828,
+    #1b2c3d,
+    #0c0f1a
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background: url("../images/wallpaper\ 3.jpg") center / cover no-repeat;
+  border-radius: 20px;
+}
+
+.image::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 20px;
+  filter: blur(20px) opacity(1);
+  z-index: -1;
+}
+
+.form_container h1 {
+  color: #ffd166;
+  font-size: 3em;
+  text-shadow: 2px 2px 20px #ffd166;
+  margin-left: 20px;
+}
+
+form {
+  margin-top: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  height: 50%;
+}
+
+form .input_data {
+  width: calc(50% - 15px);
+  position: relative;
+}
+
+form .input_data input {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  padding: 7px 10px;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffd166;
+  position: relative;
+  z-index: 500;
+  color: #ffd166;
+  margin-left: 20px;
+}
+
+form .input_data .label_area {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  transition: top 0.5s ease, left 0.5s ease;
+  color: #ffd166;
+}
+
+form .input_data input:focus,
+form .input_data input:valid {
+  color: #ffd166;
+  border-color: #ffd166;
+}
+
+form .input_data input:focus ~ .label_area,
+form .input_data input:valid ~ .label_area {
+  z-index: 600;
+  top: 0;
+  left: 7%;
+  color: #ffd166;
+}
+
+form select,
+form option {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #ffd166;
+  color: #ffd166;
+  margin-left: 20px;
+}
+
+form button {
+  width: 100%;
+  background-color: #ffd166;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0c0f1a; /* contraste escuro */
+  margin-left: 20px;
+}
+
+form button:hover {
+  background: transparent;
+  border: 2px solid #ffd166;
+  color: #ffd166;
+  margin-left: 20px;
+}

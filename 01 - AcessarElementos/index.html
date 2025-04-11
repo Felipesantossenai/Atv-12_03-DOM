@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- LINK JAVASCRIPT -->
+    <!-- <script src="./scripts.js" defer></script> -->
+  </head>
+  <body>
+    <h1 id="titulo">Primeiro titulo!</h1>
+
+    <input type="text" id="nome" name="nome" value="Felipe" />
+
+    <form id="formulario">
+      <input type="email" name="email" id="email" />
+      <button type="button" onclick="getEmail()">Enviar</button>
+    </form>
+
+    <p class="paragrafo">Paragrafo 1</p>
+    <p class="paragrafo">Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <p>Paragrafo 4</p>
+    <p>Paragrafo 5</p>
+
+    <ul>
+      <li class="item">Item 1</li>
+      <li class="item">Item 2</li>
+    </ul>
+
+    <section>
+      <div class="card">
+        <p>Paragrafo dentro do primeiro card</p>
+      </div>
+
+      <div class="card">
+        <p id="paragrafo2">Paragrafo dentro do segundo card</p>
+      </div>
+    </section>
+
+    <script>
+      const titulo = document.getElementById("titulo");
+      const inputNome = document.getElementById("nome");
+      const paragrafos = document.getElementsByClassName("paragrafo");
+      const itens = document.getElementsByClassName("item");
+      const itensP = document.getElementsByTagName("p");
+      const textCard1 = document.querySelector(".card p");
+      const textCard2 = document.querySelector(".card #paragrafo2");
+      const cards = document.querySelectorAll(".card");
+      const nome = document.getElementsByName("nome");
+
+      function getEmail() {
+        const email = document.getElementById("email");
+
+        console.log(email.value);
+      }
+
+      console.log(titulo);
+      console.log(titulo.textContent);
+      console.log(inputNome);
+      console.log(inputNome.value);
+      console.log(paragrafos[0]);
+      console.log(paragrafos[1]);
+      console.log(paragrafos[0].textContent);
+      console.log(paragrafos[1].textContent);
+      console.log((itens[0].textContent = "Item 1 Modificado!"));
+      console.log(itensP[3]);
+      console.log(textCard1.textContent);
+      console.log(textCard2.textContent);
+      console.log(cards.length);
+      console.log(nome);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- LINK JAVASCRIPT -->
+    <!-- <script src="./scripts.js" defer></script> -->
+  </head>
+  <body>
+    <ul>
+      <li class="item">Item 2</li>
+      <li>Item 4</li>
+    </ul>
+
+    <script>
+      const lista = document.getElementsByTagName("ul");
+      const paragrafo = document.createElement("p");
+      const item1 = document.createElement("li");
+      const item3 = document.createElement("li");
+      const item5 = document.createElement("li");
+
+      // paragrafo.innerText = "Meu primeiro paragrafo via javascript!";
+      paragrafo.textContent = "Meu primeiro paragrafo via javascript!";
+      paragrafo.style.color = "#ff0000";
+      paragrafo.style.fontSize = "18px";
+      paragrafo.style.fontStyle = "italic";
+      console.log(paragrafo);
+
+      item1.textContent = "Item 1";
+      item3.textContent = "Item 3";
+      item5.textContent = "Item 5";
+
+      document.body.prepend(paragrafo);
+      document.body.appendChild(paragrafo);
+
+      // Item 1, Item 2, Item 4
+      //   0  --   1  --   2
+      lista[0].prepend(item1);
+
+      // Item 1, Item 2, **Item 3**, Item 4
+      //   0  --   1   --    2    --   3
+      lista[0].insertBefore(item3, lista[0].children[2]);
+      lista[0].appendChild(item5);
+    </script>
+  </body>
+</html>

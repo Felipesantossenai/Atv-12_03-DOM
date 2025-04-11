@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Atividades</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- <script src="./script.js" defer></script> -->
+  </head>
+  <body>
+    <script>
+      const botao = document.createElement("a");
+
+      botao.innerText = "Click me!";
+      botao.setAttribute("onclick", "saudacao()");
+      botao.classList.add("btn");
+      document.body.prepend(botao);
+
+      console.log(botao.getAttribute("onclick"));
+      console.log(typeof botao.getAttribute("onclick"));
+
+      if (botao.classList.contains("btn")) {
+        botao.classList.contains("onclick") === "saudacao()";
+      }
+      {
+        botao.style.textDecoration = "none";
+        botao.style.padding = "10px 20px";
+        botao.style.fontSize = "24px";
+        botao.style.fontWeight = "bold";
+        botao.style.textAlign = "center";
+        botao.style.color = "#fff";
+        botao.style.backgroundColor = "#ff5252";
+        botao.style.border = "2px solid #000";
+        botao.style.borderRadius = "10px";
+        botao.style.cursor = "pointer";
+        botao.style.boxShadow = "5px 5px 0 #000";
+        botao.style.transition = "all 0.3s ease";
+      }
+
+      console.log(botao);
+    </script>
+  </body>
+</html>
