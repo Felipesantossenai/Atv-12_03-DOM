@@ -33,17 +33,14 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div class="weather">
-        <h1 class="title">Nome cidade</h1>
+      <div class="weather" id="weather">
+        <h1 class="title" id="id"></h1>
         <div class="infos">
           <div class="temp">
-            <img
-              src="/10 - API OpenWeather/image/Wallpaper-01.jfif"
-              alt="Imagem vindo da API referente ao tempo"
-            />
+            <img alt="Imagem vindo da API referente ao tempo" id="img" />
             <div>
-              <p class="temp_value">32 <sup>C°</sup></p>
-              <p class="temp_description">Ensolarado</p>
+              <p class="temp_value" id="temp1"></p>
+              <p class="temp_description" id="temp2"></p>
             </div>
           </div>
         </div>
@@ -52,7 +49,7 @@
             <i class="temp_max_icon fa-solid fa-temperature-high"> </i>
             <div>
               <h2>Temp. Max</h2>
-              <p class="temp_max">32 <sup>C°</sup></p>
+              <p class="temp_max" id="tempmax"></p>
             </div>
           </div>
 
@@ -60,7 +57,7 @@
             <i class="temp_min_icon fa-solid fa-temperature-low"> </i>
             <div>
               <h2>Temp. Min</h2>
-              <p class="temp_min">10 <sup>C°</sup></p>
+              <p class="temp_min" id="tempmin"></p>
             </div>
           </div>
 
@@ -68,15 +65,15 @@
             <i class="humidity_icon fa-solid fa-droplet"> </i>
             <div>
               <h2>Umidade</h2>
-              <p class="humidity">50%</p>
+              <p class="humidity" id="umidade"></p>
             </div>
           </div>
 
           <div class="info">
             <i class="wind_icon fa-solid fa-wind"> </i>
             <div>
-              <h2>ventos</h2>
-              <p class="wind">20 km/h</p>
+              <h2>Ventos</h2>
+              <p class="wind" id="vento"></p>
             </div>
           </div>
         </div>

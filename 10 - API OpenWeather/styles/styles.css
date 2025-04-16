@@ -58,7 +58,19 @@ body {
 }
 
 .weather {
+  visibility: hidden;
   width: 100%;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.weather.visible {
+  visibility: visible;
+  opacity: 1;
+  height: 300px;
+  overflow: visible;
 }
 
 .weather .title {
