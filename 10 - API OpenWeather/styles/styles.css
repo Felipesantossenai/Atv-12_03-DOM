@@ -16,7 +16,8 @@ body {
 
 .container {
   width: 400px;
-  height: 400px;
+  /* A Julia Piconi mandou comentar para ficar mais bonito :) */
+  /* height: 400px; */
   background: rgba(0, 0, 0, 0.5);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
